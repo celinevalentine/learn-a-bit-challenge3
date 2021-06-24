@@ -1,0 +1,136 @@
+:root {
+  --theme-main-color: #24e5a3;
+  --theme-second-color: #5ef4d6;
+  --bg-main-color: #221727;
+  --bg-second-color: #4143b1;
+  --nav-second-color-t: rgba(34, 23, 39, 0.8);
+  --theme-third-color: #f1fff6;
+  --main-font: 'Rubik', sans-serif;
+  --second-font: 'Viga', sans-serif;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-second-color);
+  text-align: center;
+  color: var(--theme-main-color);
+  font-family: var(--second-font);
+  position: relative;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  gap: 12rem;
+  z-index: 2;
+  margin-bottom: 3rem;
+}
+
+.team__title {
+  margin-top: 3rem;
+  font-size: 2rem;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  z-index: 10;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 65vh;
+  margin: 0 auto;
+  border: var(--theme-main-color) solid 0.1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-main-color);
+  z-index: 20;
+}
+
+.card__image {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: -120px;
+  left: 64px;
+  height: 220px;
+  width: 60%;
+  object-fit: contain;
+  border-radius: 50%;
+  border: var(--theme-main-color) solid 0.2rem;
+  z-index: 100;
+}
+#image_one {
+  background: url(../images/person-one.jpg) no-repeat center / cover;
+}
+#image_two {
+  background: url(../images/person-two.jpg) no-repeat center / cover;
+}
+#image_three {
+  background: url(../images/person-three.jpg) no-repeat center / cover;
+}
+
+.text__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 8rem;
+}
+
+.text__name {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.text__role {
+  margin-top: -1rem;
+  color: var(--theme-second-color);
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+
+.text__bio {
+  margin: 1rem 3rem;
+  color: var(--theme-third-color);
+  font-family: var(--main-font);
+  line-height: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+a {
+  text-decoration: none;
+  border: var(--theme-main-color) solid 0.1rem;
+  border-radius: 50%;
+  color: var(--theme-main-color);
+  font-size: 2rem;
+  padding: 0.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    flex: 1;
+    margin: 3rem 5rem;
+  }
+}
