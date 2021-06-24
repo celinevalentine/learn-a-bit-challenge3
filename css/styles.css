@@ -28,6 +28,7 @@ body {
 .team {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
   margin: 0 auto;
   min-height: 100vh;
@@ -38,6 +39,7 @@ body {
 
 .team__title {
   margin-top: 3rem;
+  text-align: center;
   font-size: 2rem;
 }
 .cards {
@@ -52,7 +54,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 65vh;
+  height: 50vh;
   margin: 0 auto;
   border: var(--theme-main-color) solid 0.1rem;
   border-radius: 0.5rem;
@@ -116,6 +118,7 @@ body {
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
+  margin: 0.2rem 2rem;
 }
 
 a {
@@ -128,6 +131,9 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .team {
+    max-width: 60%;
+  }
   .cards {
     flex-direction: row;
     flex: 1;
